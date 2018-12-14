@@ -36,7 +36,7 @@
          group as the part of a menu contained between two lines. The parent of a group
          must be a menu. -->
     <Groups>
-      <Group guid="guidLocateFolderCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+      <Group guid="guidLocateFolderCommandPackageCmdSet" id="MyMenuGroup" priority="0X0200">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
     </Groups>
@@ -56,7 +56,7 @@
         <Parent guid="guidLocateFolderCommandPackageCmdSet" id="MyMenuGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Invoke LocateFolderCommand</ButtonText>
+          <ButtonText>Load XAML file</ButtonText>
         </Strings>
       </Button>
     </Buttons>
