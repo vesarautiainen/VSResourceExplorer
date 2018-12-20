@@ -90,8 +90,14 @@ namespace XamlViewer
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
-            string title = "LocateFolderCommand";
 
+            var control = new MyControl();
+            control.ShowDialog();
+
+  
+
+            /*
+            string title = "LocateFolderCommand";
             // Show a message box to prove we were here
             VsShellUtilities.ShowMessageBox(
                 this.package,
@@ -100,6 +106,7 @@ namespace XamlViewer
                 OLEMSGICON.OLEMSGICON_INFO,
                 OLEMSGBUTTON.OLEMSGBUTTON_OK,
                 OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+                */
         }
     }
 }
