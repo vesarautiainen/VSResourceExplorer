@@ -12,7 +12,7 @@ namespace XamlViewer
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class LocateFolderCommand
+    internal sealed class ViewCustomXamlCommand
     {
         /// <summary>
         /// Command ID.
@@ -30,12 +30,12 @@ namespace XamlViewer
         private readonly AsyncPackage package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocateFolderCommand"/> class.
+        /// Initializes a new instance of the <see cref="ViewCustomXamlCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
         /// <param name="commandService">Command service to add command to, not null.</param>
-        private LocateFolderCommand(AsyncPackage package, OleMenuCommandService commandService)
+        private ViewCustomXamlCommand(AsyncPackage package, OleMenuCommandService commandService)
         {
             this.package = package ?? throw new ArgumentNullException(nameof(package));
             commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
@@ -48,7 +48,7 @@ namespace XamlViewer
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static LocateFolderCommand Instance
+        public static ViewCustomXamlCommand Instance
         {
             get;
             private set;
@@ -76,7 +76,7 @@ namespace XamlViewer
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
 
             OleMenuCommandService commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as OleMenuCommandService;
-            Instance = new LocateFolderCommand(package, commandService);
+            Instance = new ViewCustomXamlCommand(package, commandService);
         }
 
         /// <summary>
