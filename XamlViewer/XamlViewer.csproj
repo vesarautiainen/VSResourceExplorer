@@ -58,8 +58,8 @@
     <Compile Include="LocateFolderCommand.cs" />
     <Compile Include="LocateFolderCommandPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyControl.xaml.cs">
-      <DependentUpon>MyControl.xaml</DependentUpon>
+    <Compile Include="ExampleDialog.xaml.cs">
+      <DependentUpon>ExampleDialog.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -180,7 +180,7 @@
     <Content Include="Resources\LocateFolderCommandPackage.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MyControl.xaml">
+    <Page Include="ExampleDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

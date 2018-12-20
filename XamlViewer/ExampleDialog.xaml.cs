@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace XamlViewer
 {
     /// <summary>
-    /// Interaction logic for MyControl.xaml
+    /// Interaction logic for ExampleDialog.xaml
     /// </summary>
-    public partial class MyControl : BaseDialogWindow
+    public partial class ExampleDialog : BaseDialogWindow
     {
-        public MyControl()
+        public ExampleDialog()
         {
             InitializeComponent();
         }

@@ -91,7 +91,7 @@ namespace XamlViewer
             ThreadHelper.ThrowIfNotOnUIThread();
             string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
 
-            var control = new MyControl();
+            var control = new ExampleDialog();
             control.ShowDialog();
 
   
