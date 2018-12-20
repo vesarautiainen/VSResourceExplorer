@@ -4,14 +4,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:XamlViewer"
-             xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.11.0"
+             xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
              mc:Ignorable="d" 
              Width="400" Height="250">
-    <Grid Background="LightGray">
+
+    <Grid Background="White">
+        
         <StackPanel>
-            <TextBlock>Line 1</TextBlock>
-            <TextBlock>Line 2</TextBlock>
-            <TextBlock>Line 3</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">
+                375% Environment font + Light</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">
+                310% Environment font + Light</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey}}">
+                200% Environment font + Semilight</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey}}">
+                155% Environment font</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey}}">
+                133% Environment font</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey}}">
+                122% Environment font</TextBlock>
+            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironmentBoldStyleKey}}">
+                Environment font + bold</TextBlock>
+            <TextBlock Margin="20">
+                Environment font</TextBlock>
+
+
         </StackPanel>
     </Grid>
 </local:BaseDialogWindow>
