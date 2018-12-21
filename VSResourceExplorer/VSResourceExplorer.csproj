@@ -58,8 +58,8 @@
     <Compile Include="ViewCustomXamlCommand.cs" />
     <Compile Include="ViewCustomXamlCommandPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ExampleDialog.xaml.cs">
-      <DependentUpon>ExampleDialog.xaml</DependentUpon>
+    <Compile Include="FontRampDialog.xaml.cs">
+      <DependentUpon>FontRampDialog.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -188,7 +188,7 @@
     <Content Include="Resources\VSResourceExplorer.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ExampleDialog.xaml">
+    <Page Include="FontRampDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

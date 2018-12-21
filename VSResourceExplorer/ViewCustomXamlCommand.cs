@@ -91,7 +91,7 @@ namespace VSResourceExplorer
             ThreadHelper.ThrowIfNotOnUIThread();
             string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
 
-            var control = new ExampleDialog();
+            var control = new FontRampDialog();
             control.ShowDialog();
 
   
