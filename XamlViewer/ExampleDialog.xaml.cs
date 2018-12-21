@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace XamlViewer
+namespace VSResourceExplorer
 {
     /// <summary>
     /// Interaction logic for ExampleDialog.xaml

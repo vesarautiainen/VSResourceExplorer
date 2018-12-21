@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28209.50
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlViewer", "XamlViewer\XamlViewer.csproj", "{48A9A4CB-5E5D-462F-BC11-A98859B30478}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSResourceExplorer", "XamlViewer\VSResourceExplorer.csproj", "{48A9A4CB-5E5D-462F-BC11-A98859B30478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

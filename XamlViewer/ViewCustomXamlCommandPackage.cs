@@ -13,7 +13,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Win32;
 using Task = System.Threading.Tasks.Task;
 
-namespace XamlViewer
+namespace VSResourceExplorer
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.

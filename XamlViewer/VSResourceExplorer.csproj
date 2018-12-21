@@ -185,7 +185,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\XamlViewer.png" />
+    <Content Include="Resources\VSResourceExplorer.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="ExampleDialog.xaml">
