@@ -4,31 +4,41 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VSResourceExplorer"
-             xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
              mc:Ignorable="d" 
              Width="Auto" Height="Auto">
+    <local:BaseDialogWindow.Resources>
+        <DataTemplate DataType="{x:Type local:UserControl1Model}">
+            <local:UserControl1/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local:UserControl2Model}">
+            <local:UserControl2/>
+        </DataTemplate>
+
+    </local:BaseDialogWindow.Resources>
 
     <Grid Background="White">
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="95" />
+                <Setter Property="Height" Value="35" />
+                <Setter Property="Background" Value="LightGray" />
+            </Style>
+        </Grid.Resources>
         
-        <StackPanel>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">
-                375% Environment font + Light</TextBlock>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">
-                310% Environment font + Light</TextBlock>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey}}">
-                200% Environment font + Semilight</TextBlock>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey}}">
-                155% Environment font</TextBlock>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey}}">
-                133% Environment font</TextBlock>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey}}">
-                122% Environment font</TextBlock>
-            <TextBlock Margin="20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironmentBoldStyleKey}}">
-                Environment font + bold</TextBlock>
-            <TextBlock Margin="20">
-                Environment font</TextBlock>
+        <DockPanel LastChildFill="True">
 
+            <StackPanel x:Name="navigation" Background="LightSteelBlue" DockPanel.Dock="Left">
 
-        </StackPanel>
+                <Button Content="Fonts" Command="{Binding FontsCommand}"></Button>
+
+                <Button Content="Load XAML" Command="{Binding DeptCommand}"></Button>
+
+            </StackPanel>
+
+            <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedViewModel}" Padding="20 0 20 0"/>
+
+        </DockPanel>
+
     </Grid>
 </local:BaseDialogWindow>

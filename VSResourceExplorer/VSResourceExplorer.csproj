@@ -54,6 +54,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="NavigationViewModel.cs" />
+    <Compile Include="UserControl1Model.cs" />
     <Compile Include="Dialogs\BaseDialogWindow.cs" />
     <Compile Include="ExploreResourcesCommand.cs" />
     <Compile Include="ExploreResourcesCommandPackage.cs" />
@@ -61,6 +63,13 @@
     <Compile Include="Dialogs\FontRampDialog.xaml.cs">
       <DependentUpon>FontRampDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2Model.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />
@@ -189,6 +198,14 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Dialogs\FontRampDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

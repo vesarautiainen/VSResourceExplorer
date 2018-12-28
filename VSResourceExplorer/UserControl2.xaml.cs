@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace VSResourceExplorer
 {
     /// <summary>
-    /// Interaction logic for FontRampDialog.xaml
+    /// Interaction logic for UserControl2.xaml
     /// </summary>
-    public partial class FontRampDialog : BaseDialogWindow
+    public partial class UserControl2 : UserControl
     {
-        public FontRampDialog()
+        public UserControl2()
         {
             InitializeComponent();
-
-            this.DataContext = new NavigationViewModel();
         }
     }
 }
