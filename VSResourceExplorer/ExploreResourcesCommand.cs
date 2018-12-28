@@ -12,7 +12,7 @@ namespace VSResourceExplorer
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class ViewCustomXamlCommand
+    internal sealed class ExploreResourcesCommand
     {
         /// <summary>
         /// Command ID.
@@ -30,12 +30,12 @@ namespace VSResourceExplorer
         private readonly AsyncPackage package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ViewCustomXamlCommand"/> class.
+        /// Initializes a new instance of the <see cref="ExploreResourcesCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
         /// <param name="commandService">Command service to add command to, not null.</param>
-        private ViewCustomXamlCommand(AsyncPackage package, OleMenuCommandService commandService)
+        private ExploreResourcesCommand(AsyncPackage package, OleMenuCommandService commandService)
         {
             this.package = package ?? throw new ArgumentNullException(nameof(package));
             commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
@@ -48,7 +48,7 @@ namespace VSResourceExplorer
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static ViewCustomXamlCommand Instance
+        public static ExploreResourcesCommand Instance
         {
             get;
             private set;
@@ -71,12 +71,12 @@ namespace VSResourceExplorer
         /// <param name="package">Owner package, not null.</param>
         public static async Task InitializeAsync(AsyncPackage package)
         {
-            // Switch to the main thread - the call to AddCommand in LocateFolderCommand's constructor requires
+            // Switch to the main thread - the call to AddCommand in ExploreResources's constructor requires
             // the UI thread.
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
 
             OleMenuCommandService commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as OleMenuCommandService;
-            Instance = new ViewCustomXamlCommand(package, commandService);
+            Instance = new ExploreResourcesCommand(package, commandService);
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace VSResourceExplorer
   
 
             /*
-            string title = "LocateFolderCommand";
+            string title = "ExploreResources";
             // Show a message box to prove we were here
             VsShellUtilities.ShowMessageBox(
                 this.package,

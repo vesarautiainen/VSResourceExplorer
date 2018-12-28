@@ -35,19 +35,19 @@ namespace VSResourceExplorer
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    [Guid(ViewCustomXamlCommandPackage.PackageGuidString)]
+    [Guid(ExploreResourcesCommandPackage.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    public sealed class ViewCustomXamlCommandPackage : AsyncPackage
+    public sealed class ExploreResourcesCommandPackage : AsyncPackage
     {
         /// <summary>
-        /// LocateFolderCommandPackage GUID string.
+        /// ExploreResourcesPackage GUID string.
         /// </summary>
         public const string PackageGuidString = "503aeef0-ff9c-4a7a-89df-9bf6a6ffb1c7";
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ViewCustomXamlCommandPackage"/> class.
+        /// Initializes a new instance of the <see cref="ExploreResourcesCommandPackage"/> class.
         /// </summary>
-        public ViewCustomXamlCommandPackage()
+        public ExploreResourcesCommandPackage()
         {
             // Inside this method you can place any initialization code that does not require
             // any Visual Studio service because at this point the package object is created but
@@ -69,7 +69,7 @@ namespace VSResourceExplorer
             // When initialized asynchronously, the current thread may be a background thread at this point.
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
-            await ViewCustomXamlCommand.InitializeAsync(this);
+            await ExploreResourcesCommand.InitializeAsync(this);
         }
 
         #endregion
