@@ -1,4 +1,4 @@
-﻿<local:BaseDialogWindow x:Class="VSResourceExplorer.FontRampDialog"
+﻿<local:BaseDialogWindow x:Class="VSResourceExplorer.ResourcesDialog"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              Width="Auto" Height="Auto">
     <local:BaseDialogWindow.Resources>
-        <DataTemplate DataType="{x:Type local:UserControl1Model}">
-            <local:UserControl1/>
+        <DataTemplate DataType="{x:Type local:FontsPageModel}">
+            <local:FontsPage/>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type local:UserControl2Model}">
-            <local:UserControl2/>
+        <DataTemplate DataType="{x:Type local:CustomXamlPageModel}">
+            <local:CustomXamlPage/>
         </DataTemplate>
 
     </local:BaseDialogWindow.Resources>
@@ -30,9 +30,9 @@
 
             <StackPanel x:Name="navigation" Background="LightSteelBlue" DockPanel.Dock="Left">
 
-                <Button Content="Fonts" Command="{Binding FontsCommand}"></Button>
+                <Button x:Name="fontsButton"  Content="Fonts" Command="{Binding FontsCommand}"></Button>
 
-                <Button Content="Load XAML" Command="{Binding DeptCommand}"></Button>
+                <Button Content="Load XAML" Command="{Binding CustomXamlCommand}"></Button>
 
             </StackPanel>
 

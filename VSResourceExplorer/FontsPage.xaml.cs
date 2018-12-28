@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace VSResourceExplorer
 {
     /// <summary>
-    /// Interaction logic for UserControl2.xaml
+    /// Interaction logic for FontsPage.xaml
     /// </summary>
-    public partial class UserControl2 : UserControl
+    public partial class FontsPage : UserControl
     {
-        public UserControl2()
+        public FontsPage()
         {
             InitializeComponent();
         }

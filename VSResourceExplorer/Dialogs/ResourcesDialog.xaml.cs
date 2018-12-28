@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace VSResourceExplorer
 {
     /// <summary>
-    /// Interaction logic for FontRampDialog.xaml
+    /// Interaction logic for ResourcesDialog.xaml
     /// </summary>
-    public partial class FontRampDialog : BaseDialogWindow
+    public partial class ResourcesDialog : BaseDialogWindow
     {
-        public FontRampDialog()
+        public ResourcesDialog()
         {
             InitializeComponent();
 

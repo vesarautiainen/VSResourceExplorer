@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VSResourceExplorer
 {
-    class UserControl2Model
+    class CustomXamlPageModel
     {
     }
 }

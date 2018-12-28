@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace VSResourceExplorer
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for CustomXamlPage.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class CustomXamlPage : UserControl
     {
-        public UserControl1()
+        public CustomXamlPage()
         {
             InitializeComponent();
         }

@@ -11,7 +11,7 @@ namespace VSResourceExplorer
     class NavigationViewModel : INotifyPropertyChanged
     {
         public ICommand FontsCommand { get; set; }
-        public ICommand DeptCommand { get; set; }
+        public ICommand CustomXamlCommand { get; set; }
 
         private object selectedViewModel;
 
@@ -21,20 +21,19 @@ namespace VSResourceExplorer
             set { selectedViewModel = value; OnPropertyChanged("SelectedViewModel"); }
         }
 
-
         public NavigationViewModel()
         {
             FontsCommand = new BaseCommand(OpenFonts);
-            DeptCommand = new BaseCommand(OpenDept);
+            CustomXamlCommand = new BaseCommand(OpenCustomXaml);
         }
 
         private void OpenFonts(object obj)
         {
-            SelectedViewModel = new UserControl1Model();
+            SelectedViewModel = new FontsPageModel();
         }
-        private void OpenDept(object obj)
+        private void OpenCustomXaml(object obj)
         {
-            SelectedViewModel = new UserControl2Model();
+            SelectedViewModel = new CustomXamlPageModel();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
