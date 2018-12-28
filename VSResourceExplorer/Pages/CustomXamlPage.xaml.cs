@@ -31,14 +31,14 @@ namespace VSResourceExplorer
             dialog.Title = "This is the custom dialog";
 
             var button = new Button();
-            button.Content = "Test Button";
+            button.Content = "This would be a button created dynamically from the pasted XAML";
             button.Width = 95;
             button.Height = 35;
 
-            var stackPanel = new StackPanel();
-            stackPanel.Children.Add(button);
+            var grid = new Grid();
+            grid.Children.Add(button);
 
-            dialog.Content = stackPanel;
+            dialog.Content = grid;
             dialog.ShowDialog();
         }
 
