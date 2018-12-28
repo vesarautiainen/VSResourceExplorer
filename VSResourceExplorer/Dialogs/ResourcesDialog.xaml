@@ -20,7 +20,7 @@
     <Grid Background="White">
         <Grid.Resources>
             <Style TargetType="Button">
-                <Setter Property="Width" Value="95" />
+                <Setter Property="Width" Value="125" />
                 <Setter Property="Height" Value="35" />
                 <Setter Property="Background" Value="LightGray" />
             </Style>
@@ -28,7 +28,7 @@
         
         <DockPanel LastChildFill="True">
 
-            <StackPanel x:Name="navigation" Background="LightSteelBlue" DockPanel.Dock="Left">
+            <StackPanel x:Name="navigation" DockPanel.Dock="Left">
 
                 <Button x:Name="fontsButton"  Content="Fonts" Command="{Binding FontsCommand}"></Button>
 

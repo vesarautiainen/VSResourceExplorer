@@ -54,22 +54,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="NavigationViewModel.cs" />
-    <Compile Include="FontsPageModel.cs" />
+    <Compile Include="Pages\NavigationViewModel.cs" />
+    <Compile Include="Pages\FontsPageModel.cs" />
     <Compile Include="Dialogs\BaseDialogWindow.cs" />
-    <Compile Include="ExploreResourcesCommand.cs" />
-    <Compile Include="ExploreResourcesCommandPackage.cs" />
+    <Compile Include="Commands\ExploreResourcesCommand.cs" />
+    <Compile Include="Commands\ExploreResourcesCommandPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dialogs\ResourcesDialog.xaml.cs">
       <DependentUpon>ResourcesDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FontsPage.xaml.cs">
+    <Compile Include="Pages\FontsPage.xaml.cs">
       <DependentUpon>FontsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomXamlPage.xaml.cs">
+    <Compile Include="Pages\CustomXamlPage.xaml.cs">
       <DependentUpon>CustomXamlPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomXamlPageModel.cs" />
+    <Compile Include="Pages\CustomXamlPageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />
@@ -173,7 +173,7 @@
     <Analyzer Include="..\packages\Microsoft.VisualStudio.Threading.Analyzers.15.8.122\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <VSCTCompile Include="ExploreResourcesCommandPackage.vsct">
+    <VSCTCompile Include="Commands\ExploreResourcesCommandPackage.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
       <SubType>Designer</SubType>
     </VSCTCompile>
@@ -201,11 +201,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FontsPage.xaml">
+    <Page Include="Pages\FontsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomXamlPage.xaml">
+    <Page Include="Pages\CustomXamlPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
