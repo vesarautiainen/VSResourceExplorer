@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Markup;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using Microsoft.VisualStudio.Shell;
 
 namespace VSResourceExplorer
 {
@@ -20,26 +23,45 @@ namespace VSResourceExplorer
     /// </summary>
     public partial class CustomXamlPage : UserControl
     {
+        private string exampleButtonInString;
+
         public CustomXamlPage()
         {
             InitializeComponent();
+            CreateExampleButton();
+        }
+
+        private void CreateExampleButton()
+        {
+            // Create the Button.
+            Button originalButton = new Button();
+            originalButton.Height = 50;
+            originalButton.Width = 150;
+            originalButton.Background =  Brushes.AliceBlue;
+
+            TextBlock buttonTextBlock = new TextBlock();
+            const string V = "Example button!!";
+            buttonTextBlock.Text = V;
+            buttonTextBlock.SetResourceReference(TextBlock.StyleProperty, VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey);
+            originalButton.Content = buttonTextBlock;
+
+            // Save the Button to a string.
+            exampleButtonInString = XamlWriter.Save(originalButton);
+            txtXaml.Text = exampleButtonInString;
         }
 
         private void ShowButtonClicked(object sender, RoutedEventArgs e)
         {
             var dialog = new BaseDialogWindow();
-            dialog.Title = "This is the custom dialog";
+            dialog.Title = "XAML Preview";
 
-            var textBlock = new TextBlock();
-            textBlock.Text = "This dialog would display the XAML from the text box on the previous page:";
-            textBlock.Text += "\r\n" + "\r\n" + txtXaml.Text;
-            textBlock.Width = 350;
-            textBlock.TextWrapping = TextWrapping.Wrap;
-            textBlock.VerticalAlignment = VerticalAlignment.Center;
-            textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+            // Load the button
+            System.IO.StringReader stringReader = new System.IO.StringReader(txtXaml.Text);
+            XmlReader xmlReader = XmlReader.Create(stringReader);
+            Button exampleButton = (Button)XamlReader.Load(xmlReader);
 
             var grid = new Grid();
-            grid.Children.Add(textBlock);
+            grid.Children.Add(exampleButton);
 
             dialog.Content = grid;
             dialog.ShowDialog();

@@ -9,8 +9,9 @@
     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="40 0" Width="500">
         <TextBlock 
                 TextWrapping="Wrap" 
-                Text="On this page the user can paste in some custom XAML that is then attached to a an existing empty dialog (or something similar) and shown to the user. This XAML could for example be the output of the script that creates XAML from Figma design files. "/>
-        <Label Content="Custom XAML:" Target="{Binding ElementName=txtXaml}" Padding="0 4" Margin=" 0 10 0 0"/>
+                Text="On this page the user can paste in custom XAML that is attached to some UI container and shown to the user. This XAML could for example be the output of the script that creates XAML from Figma design files. "/>
+        <TextBlock TextWrapping="Wrap"
+                   Text="XAML (Only Button type works for now as the string is converted explicitly to Button type in code. Note how font resources are accessed below!):" Padding="0 4" Margin=" 0 10 0 0"/>
         <TextBox 
                 Name="txtXaml"
                 TextWrapping="Wrap" 
