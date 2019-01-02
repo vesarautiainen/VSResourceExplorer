@@ -30,13 +30,12 @@ namespace VSResourceExplorer
             var dialog = new BaseDialogWindow();
             dialog.Title = "This is the custom dialog";
 
-            var button = new Button();
-            button.Content = "This would be a button created dynamically from the pasted XAML";
-            button.Width = 95;
-            button.Height = 35;
+            var textBlock = new TextBlock();
+            textBlock.Text = "This dialog would display the XAML from the text box on the previous page. We could also ask the user to find the XAML file to be shown.";
+            Width = 350;
 
             var grid = new Grid();
-            grid.Children.Add(button);
+            grid.Children.Add(textBlock);
 
             dialog.Content = grid;
             dialog.ShowDialog();

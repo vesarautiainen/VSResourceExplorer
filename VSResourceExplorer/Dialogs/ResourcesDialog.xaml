@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VSResourceExplorer"
              mc:Ignorable="d" 
-             Width="Auto" Height="Auto">
+             Width="Auto" Height="Auto"
+             Title="Design System Resources in Visual Studio">
     <local:BaseDialogWindow.Resources>
         <DataTemplate DataType="{x:Type local:FontsPageModel}">
             <local:FontsPage/>
@@ -17,28 +18,26 @@
 
     </local:BaseDialogWindow.Resources>
 
-    <Grid Background="White">
-        <Grid.Resources>
+    <DockPanel LastChildFill="True" Margin="0 20 0 0">
+        <DockPanel.Resources>
             <Style TargetType="Button">
-                <Setter Property="Width" Value="125" />
+                <Setter Property="Width" Value="160" />
                 <Setter Property="Height" Value="35" />
                 <Setter Property="Background" Value="LightGray" />
             </Style>
-        </Grid.Resources>
+        </DockPanel.Resources>
         
-        <DockPanel LastChildFill="True">
+        <StackPanel x:Name="navigation" DockPanel.Dock="Left">
 
-            <StackPanel x:Name="navigation" DockPanel.Dock="Left">
+            <Button x:Name="fontsButton"  Content="Fonts" Command="{Binding FontsCommand}"></Button>
+            <Button IsEnabled="false" Content="Colors"></Button>
+            <Button IsEnabled="False" Content="Grid layouts"></Button>
+            <Button Content="Preview XAML" Command="{Binding CustomXamlCommand}"></Button>
+            <Button IsEnabled="false" Content="Customize Theme"></Button>
+        </StackPanel>
 
-                <Button x:Name="fontsButton"  Content="Fonts" Command="{Binding FontsCommand}"></Button>
+        <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedViewModel}" Padding="20 0 20 0"/>
 
-                <Button Content="Load XAML" Command="{Binding CustomXamlCommand}"></Button>
+    </DockPanel>
 
-            </StackPanel>
-
-            <ContentControl x:Name="Pages" DockPanel.Dock="Right" Content="{Binding SelectedViewModel}" Padding="20 0 20 0"/>
-
-        </DockPanel>
-
-    </Grid>
 </local:BaseDialogWindow>

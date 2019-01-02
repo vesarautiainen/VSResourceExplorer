@@ -4,8 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VSResourceExplorer"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d">
 
     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="40 20" Width="500">
         <TextBlock 
@@ -17,8 +16,7 @@
                 TextWrapping="Wrap" 
                 HorizontalAlignment="Left" 
                 Width="500"
-                Height="250
-            " 
+                Height="250" 
                 Foreground="Gray" 
                 Text="Paste here the custom XAML code that you want to preview (This feature is not yet implemented)"
                 Padding="4" TextChanged="TxtXaml_TextChanged"
