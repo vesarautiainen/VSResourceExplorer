@@ -58,13 +58,25 @@ namespace VSResourceExplorer
             // Load the button
             System.IO.StringReader stringReader = new System.IO.StringReader(txtXaml.Text);
             XmlReader xmlReader = XmlReader.Create(stringReader);
-            Button exampleButton = (Button)XamlReader.Load(xmlReader);
 
-            var grid = new Grid();
-            grid.Children.Add(exampleButton);
+            try
+            {
+                Button exampleButton = (Button)XamlReader.Load(xmlReader);
+                var grid = new Grid();
+                grid.Children.Add(exampleButton);
 
-            dialog.Content = grid;
-            dialog.ShowDialog();
+                dialog.Content = grid;
+                dialog.ShowDialog();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error in XAML parsing");
+            }
+            finally
+            {
+   
+            }
+    
         }
 
         private void TxtXaml_TextChanged(object sender, TextChangedEventArgs e)
