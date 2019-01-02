@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="500">
     
-    <StackPanel Margin="40 20">
+    <StackPanel Margin="40 0">
         <TextBlock Margin="0 20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">
                 375% Environment font + Light</TextBlock>
         <TextBlock Margin="0 20" Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">

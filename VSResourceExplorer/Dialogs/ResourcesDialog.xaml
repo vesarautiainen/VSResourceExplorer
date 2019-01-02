@@ -19,6 +19,7 @@
     </local:BaseDialogWindow.Resources>
 
     <DockPanel LastChildFill="True" Margin="0 20 0 0">
+
         <DockPanel.Resources>
             <Style TargetType="Button">
                 <Setter Property="Width" Value="160" />
@@ -26,10 +27,9 @@
                 <Setter Property="Background" Value="LightGray" />
             </Style>
         </DockPanel.Resources>
-        
-        <StackPanel x:Name="navigation" DockPanel.Dock="Left">
 
-            <Button x:Name="fontsButton"  Content="Fonts" Command="{Binding FontsCommand}"></Button>
+        <StackPanel x:Name="navigation" DockPanel.Dock="Left">
+            <Button x:Name="fontsButton" Content="Fonts" Command="{Binding FontsCommand}"></Button>
             <Button IsEnabled="false" Content="Colors"></Button>
             <Button IsEnabled="False" Content="Grid layouts"></Button>
             <Button Content="Preview XAML" Command="{Binding CustomXamlCommand}"></Button>

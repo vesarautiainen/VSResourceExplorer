@@ -31,8 +31,12 @@ namespace VSResourceExplorer
             dialog.Title = "This is the custom dialog";
 
             var textBlock = new TextBlock();
-            textBlock.Text = "This dialog would display the XAML from the text box on the previous page. We could also ask the user to find the XAML file to be shown.";
-            Width = 350;
+            textBlock.Text = "This dialog would display the XAML from the text box on the previous page:";
+            textBlock.Text += "\r\n" + "\r\n" + txtXaml.Text;
+            textBlock.Width = 350;
+            textBlock.TextWrapping = TextWrapping.Wrap;
+            textBlock.VerticalAlignment = VerticalAlignment.Center;
+            textBlock.HorizontalAlignment = HorizontalAlignment.Center;
 
             var grid = new Grid();
             grid.Children.Add(textBlock);
