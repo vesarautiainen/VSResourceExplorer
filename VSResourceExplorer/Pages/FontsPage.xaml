@@ -8,6 +8,13 @@
              d:DesignHeight="450" d:DesignWidth="500">
     
     <StackPanel Margin="40 0">
+        <StackPanel.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
+                <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
+            </Style>
+        </StackPanel.Resources>
+        
         <TextBlock Margin="0 20" Style="{DynamicResource TextBlockEnvironment375PercentFontSizeStyleKey}">
                 375% Environment font + Light</TextBlock>
         <TextBlock Margin="0 20" Style="{DynamicResource TextBlockEnvironment310PercentFontSizeStyleKey}">
