@@ -17,18 +17,15 @@
         <TextBox 
                 Name="txtXaml"
                 TextWrapping="Wrap" 
+                AcceptsReturn="True"
                 HorizontalAlignment="Left" 
+                VerticalScrollBarVisibility="Visible"
                 Width="500"
                 Height="250" 
                 Foreground="#1E1E1E"
                 Text="Placeholder text"
                 Padding="4" TextChanged="TxtXaml_TextChanged"
                 />
-        <TextBlock TextWrapping="Wrap"
-                   Padding="0 4"
-                   Margin=" 0 4 "
-                   Foreground="Gray"
-                   Text="Note! Only the Button type works for now as the string is converted explicitly to Button in code. Note how the font resources can be accessed from from your custom code!" />
         <Button Content="Preview" Width="75" Height="30" HorizontalAlignment="Right" Margin="0 10 0 0 " Click="ShowButtonClicked"></Button>
     </StackPanel>
 </UserControl>

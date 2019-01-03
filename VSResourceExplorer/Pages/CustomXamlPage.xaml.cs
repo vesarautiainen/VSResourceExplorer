@@ -55,22 +55,24 @@ namespace VSResourceExplorer
             var dialog = new BaseDialogWindow();
             dialog.Title = "XAML Preview";
 
-            // Load the button
-            System.IO.StringReader stringReader = new System.IO.StringReader(txtXaml.Text);
+            // wrap textbox XAML to Grid
+            string wrappedComponent = "<Grid xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">";
+            wrappedComponent += txtXaml.Text.ToString();
+            wrappedComponent += "</Grid>";
+            
+            System.IO.StringReader stringReader = new System.IO.StringReader(wrappedComponent);
             XmlReader xmlReader = XmlReader.Create(stringReader);
 
             try
             {
-                Button exampleButton = (Button)XamlReader.Load(xmlReader);
-                var grid = new Grid();
-                grid.Children.Add(exampleButton);
+                Grid exampleGrid = (Grid)XamlReader.Load(xmlReader);
 
-                dialog.Content = grid;
+                dialog.Content = exampleGrid;
                 dialog.ShowDialog();
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message, "Error in XAML parsing");
+                MessageBox.Show(exc.Message, "XAML parse error");
             }
             finally
             {
