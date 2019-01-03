@@ -94,19 +94,6 @@ namespace VSResourceExplorer
             var control = new ResourcesDialog();
             control.ShowDialog();
 
-  
-
-            /*
-            string title = "ExploreResources";
-            // Show a message box to prove we were here
-            VsShellUtilities.ShowMessageBox(
-                this.package,
-                message,
-                title,
-                OLEMSGICON.OLEMSGICON_INFO,
-                OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
-                */
         }
     }
 }
