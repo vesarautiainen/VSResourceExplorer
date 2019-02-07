@@ -26,5 +26,10 @@ namespace VSResourceExplorer
 
             this.DataContext = new NavigationViewModel();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

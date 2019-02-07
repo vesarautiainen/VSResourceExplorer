@@ -32,7 +32,7 @@
             <Button x:Name="fontsButton" Content="Fonts" Command="{Binding FontsCommand}"></Button>
             <Button IsEnabled="false" Content="Colors"></Button>
             <Button IsEnabled="False" Content="Grid layouts"></Button>
-            <Button Content="XAML Preview" Command="{Binding CustomXamlCommand}"></Button>
+            <Button Content="XAML preview" Command="{Binding CustomXamlCommand}" Click="Button_Click"></Button>
             <Button IsEnabled="false" Content="Customize Theme"></Button>
         </StackPanel>
 

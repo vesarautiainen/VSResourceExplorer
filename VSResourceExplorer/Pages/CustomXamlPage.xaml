@@ -8,12 +8,13 @@
 
     <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="40 0" Width="600">
         <TextBlock 
-                TextWrapping="Wrap" 
-                Text="On this page the user can paste in custom XAML. That would then be attached to some UI container and shown to the user. This XAML could for example be the output of the script that creates XAML from Figma design files. "/>
+                TextWrapping="Wrap"
+                Style="{DynamicResource TextBlockEnvironment310PercentFontSizeStyleKey}"
+                Text="XAML preview"/>
         <TextBlock TextWrapping="Wrap"
                    Padding="0 4"
-                   Margin=" 0 10 0 0 "
-                   Text="XAML:" />
+                   Margin=" 0 32 0 0 "
+                   Text="Paste in XAML and preview it" />
         <TextBox 
                 Name="txtXaml"
                 TextWrapping="Wrap" 
