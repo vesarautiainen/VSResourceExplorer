@@ -6,16 +6,26 @@
              xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="500">
-    
-    <StackPanel Margin="40 0">
-        <StackPanel.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
-                <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
-            </Style>
-        </StackPanel.Resources>
-        <TextBlock Margin="0 20" FontSize="36.45">
-                Custom sized text</TextBlock>
+
+    <StackPanel Margin="40 20 40 0">
+        <TextBlock Margin="0 8" FontSize="12"> Scale factor</TextBlock>
+        <Slider x:Name="uiScaleSlider" ToolTip="Determines the UI scale factor." Value="1" Minimum="1" Maximum="4" Margin="0,0,20,20"/>
+        <StackPanel Margin="0 0">
+            <StackPanel.LayoutTransform>
+                <ScaleTransform 
+                CenterX="0" CenterY="0"
+                ScaleX="{Binding ElementName=uiScaleSlider,Path=Value}"
+                ScaleY="{Binding ElementName=uiScaleSlider,Path=Value}"
+            />
+            </StackPanel.LayoutTransform>
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
+                    <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Margin="0 20" FontSize="36.45"> Custom sized text</TextBlock>
+        </StackPanel>
     </StackPanel>
     
 </UserControl>
