@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="VSResourceExplorer.CustomFontsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="500">
+    
+    <StackPanel Margin="40 0">
+        <StackPanel.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
+                <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
+            </Style>
+        </StackPanel.Resources>
+        <TextBlock Margin="0 20" FontSize="36.45">
+                Custom sized text</TextBlock>
+    </StackPanel>
+    
+</UserControl>
