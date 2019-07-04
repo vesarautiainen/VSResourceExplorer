@@ -8,8 +8,17 @@
              d:DesignHeight="600" d:DesignWidth="500">
 
     <StackPanel Margin="40 20 40 0">
-        <TextBlock Margin="0 8" FontSize="12"> Scale factor</TextBlock>
-        <Slider x:Name="uiScaleSlider" ToolTip="Determines the UI scale factor." Value="1" Minimum="1" Maximum="4" Margin="0,0,20,20"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 8" FontSize="12"> Font size:</TextBlock>
+            <TextBlock Margin="8 8 0 0" FontSize="12" Text="{Binding ElementName=fontSizeSlider,Path=Value}"/>
+        </StackPanel>
+        <Slider x:Name="fontSizeSlider" ToolTip="Determines the UI scale factor." Value="32" Minimum="1" Maximum="120" Margin="0,0,50,20"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 8" FontSize="12"> Scale factor:</TextBlock>
+            <TextBlock Margin="8 8 0 0" FontSize="12" Text="{Binding ElementName=uiScaleSlider,Path=Value}"/>
+        </StackPanel>
+        <Slider x:Name="uiScaleSlider" ToolTip="Determines the UI scale factor." Value="1" Minimum="1" Maximum="10" Margin="0,0,50,20"/>
+        
         <StackPanel Margin="0 0">
             <StackPanel.LayoutTransform>
                 <ScaleTransform 
@@ -24,7 +33,13 @@
                     <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
                 </Style>
             </StackPanel.Resources>
-            <TextBlock Margin="0 20" FontSize="36.45"> Custom sized text</TextBlock>
+            <TextBlock 
+                Margin="0 20" 
+                FontSize="{Binding ElementName=fontSizeSlider,Path=Value}"
+                Text="Custom sized text"
+            />
+            
+
         </StackPanel>
     </StackPanel>
     
