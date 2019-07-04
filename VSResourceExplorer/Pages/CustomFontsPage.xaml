@@ -9,10 +9,30 @@
 
     <StackPanel Margin="40 20 40 0">
         <StackPanel Orientation="Horizontal">
-            <TextBlock Margin="0 8" FontSize="12"> Font size:</TextBlock>
-            <TextBlock Margin="8 8 0 0" FontSize="12" Text="{Binding ElementName=fontSizeSlider,Path=Value}"/>
+            <TextBlock Name="FontSizeLabel" Margin="0 8" FontSize="12"> Font size:</TextBlock>
+            <TextBox 
+                Margin="8 0 0 0"
+                Name="fontSizeTextBox"
+                TextWrapping="NoWrap" 
+                AcceptsReturn="False"
+                HorizontalAlignment="Left" 
+                VerticalScrollBarVisibility="Disabled"
+                Width= "50"
+                Height="20"
+                FontSize="12"
+                Foreground="#1E1E1E"
+                Text="{Binding Mode=TwoWay, ElementName=fontSizeSlider, Path=Value, StringFormat=N2, UpdateSourceTrigger=PropertyChanged}"
+                Padding="4 0 0 0"
+                PreviewTextInput="NumberValidationTextBox"
+            
+                />
         </StackPanel>
-        <Slider x:Name="fontSizeSlider" ToolTip="Determines the UI scale factor." Value="32" Minimum="1" Maximum="120" Margin="0,0,50,20"/>
+        
+        <Slider x:Name="fontSizeSlider" 
+                ToolTip="Determines the UI scale factor." 
+                Value="12" 
+                Minimum="1" Maximum="120" Margin="0,5,50,10"/>
+        
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="0 8" FontSize="12"> Scale factor:</TextBlock>
             <TextBlock Margin="8 8 0 0" FontSize="12" Text="{Binding ElementName=uiScaleSlider,Path=Value}"/>
@@ -35,7 +55,7 @@
             </StackPanel.Resources>
             <TextBlock 
                 Margin="0 20" 
-                FontSize="{Binding ElementName=fontSizeSlider,Path=Value}"
+                FontSize="{Binding ElementName=fontSizeTextBox,Path=Text}"
                 Text="Custom sized text"
             />
             
