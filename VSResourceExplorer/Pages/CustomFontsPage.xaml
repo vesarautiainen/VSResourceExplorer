@@ -22,7 +22,7 @@
                 FontSize="12"
                 Foreground="#1E1E1E"
                 
-                Text="{Binding Mode=TwoWay, ElementName=fontSizeSlider, Path=Value, StringFormat=N2, UpdateSourceTrigger=PropertyChanged}"
+                Text="12.00"
                 
                 
                 Padding="4 0 0 0"
