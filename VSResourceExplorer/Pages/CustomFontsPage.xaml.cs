@@ -28,7 +28,8 @@ namespace VSResourceExplorer
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9.]+");
+            //Regex regex = new Regex("[^0-9.]+");
+            Regex regex = new Regex("^\\d{ 1,3} (\\.\\d{ 1,2})?$");
             e.Handled = regex.IsMatch(e.Text);
         }
     }
