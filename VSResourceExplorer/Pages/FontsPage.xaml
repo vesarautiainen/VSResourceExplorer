@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="500">
+             d:DesignHeight="600" d:DesignWidth="500">
     
     <StackPanel Margin="40 0">
         <StackPanel.Resources>
@@ -14,8 +14,11 @@
                 <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
             </Style>
         </StackPanel.Resources>
-        
-        <TextBlock Margin="0 20" Style="{DynamicResource TextBlockEnvironment375PercentFontSizeStyleKey}">
+        <TextBlock 
+                TextWrapping="Wrap"
+                Style="{DynamicResource TextBlockEnvironment310PercentFontSizeStyleKey}"
+                Text="Font ramp"/>
+        <TextBlock Margin="0 32" Style="{DynamicResource TextBlockEnvironment375PercentFontSizeStyleKey}">
                 375% Environment font + Light</TextBlock>
         <TextBlock Margin="0 20" Style="{DynamicResource TextBlockEnvironment310PercentFontSizeStyleKey}">
                 310% Environment font + Light</TextBlock>

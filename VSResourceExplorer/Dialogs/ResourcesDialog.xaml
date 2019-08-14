@@ -12,6 +12,10 @@
             <local:FontsPage/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type local:CustomFontsPageModel}">
+            <local:CustomFontsPage/>
+        </DataTemplate>
+        
         <DataTemplate DataType="{x:Type local:CustomXamlPageModel}">
             <local:CustomXamlPage/>
         </DataTemplate>
@@ -29,10 +33,10 @@
         </DockPanel.Resources>
 
         <StackPanel x:Name="navigation" DockPanel.Dock="Left">
-            <Button x:Name="fontsButton" Content="Fonts" Command="{Binding FontsCommand}"></Button>
-            <Button IsEnabled="false" Content="Colors"></Button>
+            <Button x:Name="fontsButton" Content="Font ramp" Command="{Binding FontsCommand}"></Button>
+            <Button x:Name="customFontButton" Content="Custom font" Command="{Binding CustomFontsCommand}"></Button>
+            <Button Content="XAML preview" Command="{Binding CustomXamlCommand}" Click="Button_Click"></Button>
             <Button IsEnabled="False" Content="Grid layouts"></Button>
-            <Button Content="XAML Preview" Command="{Binding CustomXamlCommand}"></Button>
             <Button IsEnabled="false" Content="Customize Theme"></Button>
         </StackPanel>
 

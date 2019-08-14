@@ -54,6 +54,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Pages\CustomFontsPage.xaml.cs">
+      <DependentUpon>CustomFontsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomFontsPageModel.cs" />
     <Compile Include="Pages\NavigationViewModel.cs" />
     <Compile Include="Pages\FontsPageModel.cs" />
     <Compile Include="Dialogs\BaseDialogWindow.cs" />
@@ -200,6 +204,10 @@
     <Page Include="Dialogs\ResourcesDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CustomFontsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\FontsPage.xaml">
       <SubType>Designer</SubType>
