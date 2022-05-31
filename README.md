@@ -13,3 +13,4 @@ Pre-requisite: You've got Visual Studio installed.
 2. Install the extension.
 3. Open Visual Studio.
 4. Tools -> Design System Resources 
+5. @Todo: What else?
